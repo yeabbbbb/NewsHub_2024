@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/home.css">
+    <script src="/javascript/home.js" defer></script>
+    <title>NewsHub</title>
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+  <div class="container">
+    <nav class="header">
+        <div class="header__logo">
+            <a href="home.html">News Hub</a>
+        </div>
+
+        <ul class="header__menu">
+          <li><a href="politics.html">Politics</a></li>
+          <li><a href="sports.html">Sports</a></li>
+          <li><a href="entertainment.html">Entertainment</a></li>
+          <li><a href="business.html">Business</a></li>
+          <li><a href="etc.html">ETC</a></li>
+      </ul>
+
+        <div class="header__right">
+            <a href="search.html" class="header__search">
+                <img src="/images/magnifying-glass-icon.png" onClick="location.href='search.html'">
+            </a>
+            <ul class="header__login">
+                <li id="login-button"><button onclick="window.location.href='login.html'">LOGIN</button></li>
+                <li id="logout-button" style="display:none;"><button onclick="logout()">LOGOUT</button></li>
+            </ul>
+        </div>
+
+        <div class="header__Btn">
+          <a href="#">menu</a>
+        </div>
+    </nav>
+
+    <section class="main">
+        <section class="main__board"><a href="">
+          <img src="../images/heading.jpg" class="board-img">
+          <div class="gradient-overlay"></div>
+          <div class="text-overlay">
+              <div class="board-title">Target thinks it can keep growing sales, here's how the retailer will do it</div>
+              <div class="category-date">
+                <span class="category">BUSINESS</span>
+                <span class="date">March 4, 2022</span>
+              </div>
+              <div class="content">It is a daily ritual for millions of Australians, but if you have noticed the price of your morning flat white or soy latte increase, ...</div>
+          </div>
+        </a></section>
+        
+        <section class="main__top-news">
+            <span class="top-news-title">Top News</span>
+            <ul class="top-news">
+              <li class="item"><a href="">
+                <span class="title">A newfound quasicrystal formed in the first atomic bomb tested in US</span>
+                <div class="category-date">
+                  <span class="category">SCIENCE</span>
+                  <span class="date">March 4, 2022</span>
+                </div>
+              </a></li>
+              <li class="item"><a href="">
+                <span class="title">How omicron's mutations make it the most infectious coronavirus variant</span>
+                <div class="category-date">
+                  <span class="category">SCIENCE</span>
+                  <span class="date">March 4, 2022</span>
+                </div>
+              </a></li>
+              <li class="item"><a href="">
+                <span class="title">Africa's fynbos plants hold their ground with the world's thinnest roots</span>
+                <div class="category-date">
+                  <span class="category">SCIENCE</span>
+                  <span class="date">March 4, 2022</span>
+                </div>
+              </a></li>
+            </ul>
+          </section>
+    </section>
+
+    <section class="recommended">
+      <span class="recommended-news-title">Recommended News</span>
+      <ul class="recommended__news">
+        <il class="recommended__item">
+          <img src="../images/recommended1.jpg" class="recommended__item-img">
+          <div class="recommended__item-info">
+            <span class="title">Target thinks it can keep growing sales, here's how the retrailer will do it</span>
+            <div class="category-date">
+              <span class="category">BUSINESS</span>
+              <span class="date">March 4, 2022</span>
+            </div>
+          </div>
+        </il>
+        <il class="recommended__item">
+          <img src="../images/recommended2.jpg" class="recommended__item-img">
+          <div class="recommended__item-info">
+            <span class="title">AMC is charging more for 'Batman' tickets as it tests out a new pricing model</span>
+            <div class="category-date">
+              <span class="category">BUSINESS</span>
+              <span class="date">March 4, 2022</span>
+            </div>
+          </div>
+        </il>
+        <il class="recommended__item">
+          <img src="../images/recommended3.png" class="recommended__item-img">
+          <div class="recommended__item-info">
+            <span class="title">Benioff touts Salesforce's sales guidance, '$30 billions are ahead of us'</span>
+            <div class="category-date">
+              <span class="category">BUSINESS</span>
+              <span class="date">March 4, 2022</span>
+            </div>
+          </div>
+        </il>
+        <il class="recommended__item">
+          <img src="../images/recommended4.jpg" class="recommended__item-img">
+          <div class="recommended__item-info">
+            <span class="title">Ford splits EVs into separate units as it boosts electric bussiness</span>
+            <div class="category-date">
+              <span class="category">BUSINESS</span>
+              <span class="date">March 4, 2022</span>
+            </div>
+          </div>
+        </il>
+        <il class="recommended__item">
+          <img src="../images/recommended5.jpg" class="recommended__item-img">
+          <div class="recommended__item-info">
+            <span class="title">Nordstrom shares soar as it makes 'baby steps', still has a ways to go</span>
+            <div class="category-date">
+              <span class="category">BUSINESS</span>
+              <span class="date">March 4, 2022</span>
+            </div>
+          </div>
+        </il>
+        <il class="recommended__item">
+          <img src="../images/recommended6.jpg" class="recommended__item-img">
+          <div class="recommended__item-info">
+            <span class="title">Meta says today's cellular networks aren't ready for the metaverse</span>
+            <div class="category-date">
+              <span class="category">BUSINESS</span>
+              <span class="date">March 4, 2022</span>
+            </div>
+          </div>
+        </il>
+      </ul>
+    </section>
+  </div>
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/search.css">
+    <script src="/javascript/search.js" defer></script>
+    <title>News Hub: Search</title>
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <div class="container">
+        <nav class="header">
+            <div class="header__logo">
+                <a href="home.html">News Hub</a>
+            </div>
+    
+            <ul class="header__menu">
+                <li><a href="politics.html">Politics</a></li>
+                <li><a href="sports.html">Sports</a></li>
+                <li><a href="entertainment.html">Entertainment</a></li>
+                <li><a href="business.html">Business</a></li>
+                <li><a href="etc.html">ETC</a></li>
+            </ul>
+    
+            <div class="header__right">
+                <a href="search.html" class="header__search">
+                    <img src="/images/magnifying-glass-icon.png" onClick="location.href='search.html'">
+                </a>
+                <ul class="header__login">
+                    <li id="login-button"><button onclick="window.location.href='login.html'">LOGIN</button></li>
+                    <li id="logout-button" style="display:none;"><button onclick="logout()">LOGOUT</button></li>
+                </ul>
+            </div>
+    
+            <div class="header__Btn">
+              <a href="#">menu</a>
+            </div>
+        </nav>
+
+        <section class="search-form">
+            <form id="search-form" action="">
+                <div class="search-area">
+                    <input type="text" name="search-term" id="search-term" autocomplete="off" required>
+                    <label id="search-term-label" for="search-term">Please enter a search term.</label>
+                </div>
+                <div class="btn-area">
+                    <button id="btn" type="submit">SEARCH</button>
+                </div>
+            </form>
+        </section>
+</body>
+</html>

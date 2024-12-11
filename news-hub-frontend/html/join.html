@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/join.css">
+    <title>Join</title>
+</head>
+<body>
+    <div class="header__logo">
+        <a href="home.html">News Hub</a>
+        <h1><a href="join.html">Sign Up</a></h1>
+    </div>
+
+    <section class="join-form">
+        <form id="signupForm" action="">
+            <div class="int-area">
+                <input type="text" name="id" id="id" autocomplete="off" required>
+                <label for="id">ID</label>
+            </div>
+            <div class="int-area">
+                <input type="password" name="pw" id="pw" autocomplete="off" required>
+                <label for="pw">Password</label>
+            </div>
+            <div class="int-area">
+                <input type="password" name="cpw" id="cpw" autocomplete="off" required>
+                <label for="cpw">Confirm Password</label>
+            </div>
+            <div class="btn-area">
+                <button id="btn" type="submit">Sign Up</button>
+            </div>
+        </form>
+    </section>
+
+    <script type="text/javaScript">
+        document.getElementById('signupForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            SignUp();
+        });
+
+        function SignUp() {
+            var id = document.getElementById("id").value;
+            var pw = document.getElementById("pw").value;
+            var cpw = document.getElementById("cpw").value;
+
+            if (id == "") {
+                alert("Please enter your ID.");
+                return false;
+            }
+            else if (pw == "") {
+                alert("Please enter your password.");
+                return false;
+            }
+            else if (cpw == "") {
+                alert("Please confirm your password.");
+                return false;
+            }
+            else if (pw !== cpw) {
+                alert("Please re-confirm password.")
+                return false;
+            }
+
+            var data = {
+                login_id: id,
+                password: pw
+            };
+
+            fetch('https://hyunewshub.shop/api/signup', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => {
+                console.log('Response:', response);
+                if (!response.ok) {
+                    return response.json();
+                }
+            })
+            .then(data => {
+                if (!data) {
+                    alert('Sign up successful!');
+                    window.location.href = 'login.html';
+                }
+                else {
+                    console.log('Data: ', data);
+                    alert('Sign up failed: ' + data.message);
+                }
+            })
+            .catch((error) => {
+                console.error('Error: ', error);
+                alert('There was a problem with the sign up process: ' + error);
+            });
+        }
+    </script>
+</body>
+</html>

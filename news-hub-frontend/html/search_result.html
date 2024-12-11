@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/search_result.css">
+    <script src="/javascript/search_result.js" defer></script>
+    <title>News Hub: Search result</title>
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <div class="container">
+        <nav class="header">
+            <div class="header__logo">
+                <a href="home.html">News Hub</a>
+            </div>
+    
+            <ul class="header__menu">
+                <li><a href="politics.html">Politics</a></li>
+                <li><a href="sports.html">Sports</a></li>
+                <li><a href="entertainment.html">Entertainment</a></li>
+                <li><a href="business.html">Business</a></li>
+                <li><a href="etc.html">ETC</a></li>
+            </ul>
+    
+            <div class="header__right">
+                <a href="search.html" class="header__search">
+                    <img src="/images/magnifying-glass-icon.png" onClick="location.href='search.html'">
+                </a>
+                <ul class="header__login">
+                    <li id="login-button"><button onclick="window.location.href='login.html'">LOGIN</button></li>
+                    <li id="logout-button" style="display:none;"><button onclick="logout()">LOGOUT</button></li>
+                </ul>
+            </div>
+    
+            <div class="header__Btn">
+              <a href="#">menu</a>
+            </div>
+        </nav>
+
+        <section class="search-form">
+            <form id="search-form" action="">
+                <div class="search-area">
+                    <input type="text" name="search-term" id="search-term" autocomplete="off" required>
+                    <label id="search-term-label" for="search-term"></label>
+                </div>
+                <div class="btn-area">
+                    <button id="btn" type="submit">SEARCH</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="result">
+            <h1 id="result-h1">Search results: Paris Olymphics</h1>
+            <ul class="result__news">
+                <il class="result__item"><a href="#">
+                    <img src="../images/search_result_1.jpeg" class="result__item-image">
+                    <div class="result__item-info">
+                        <span class="result__item-title">Paris 2024 Olympic Games break BBC Sport record with 218 million streams</span>
+                        <div class="category-date">
+                            <span class="category">SPORTS</span>
+                            <span class="date">August 13, 2024</span>
+                        </div>
+                        <span class="content">BBC Sport’s coverage of the Paris 2024 Olympic Games was streamed a record-breaking 218 million times online, more than doubling the Tokyo Olympic Games total of 104m, ...</span>
+                    </div>
+                </a></il>
+                <il class="result__item"><a href="#">
+                    <img src="../images/search_result_2.jpeg" class="result__item-image">
+                    <div class="result__item-info">
+                        <span class="result__item-title">2024 Paris Olympics end with more than 20 medals for New York, New Jersey and Connecticut athletes. See the full list.</span>
+                        <div class="category-date">
+                            <span class="category">SPORTS</span>
+                            <span class="date">August 13, 2024</span>
+                        </div>
+                        <span class="content">New York sent 31 athletes to Paris, while New Jersey sent 23 and Connecticut sent 11. Some of those athletes will be participating in the 2024 Paralympic Games, ...</span>
+                    </div>
+                </a></il>
+            </ul>
+        </section>
+
+        <div id="pagination">
+            <button id="prev-btn"><</button>
+            <div id="page-num"></div>
+	    <button id="next-btn">></button>
+        </div>
+
+        <section class="top-news">
+            <span class="top-news__title">Top News</span>
+            <ul class="top-news__">
+                <li class="top-news__item">
+                    <span class="top-news__item-title">A newfound quasicrystal formed in the first atomic bomb tested in US</span>
+                    <div class="category-date">
+                      <span class="category">SCIENCE</span>
+                      <span class="date">March 4, 2022</span>
+                    </div>
+                </li>
+                <li class="top-news__item">
+                    <span class="top-news__item-title">How omicron's mutations make it the most infectious coronavirus variant</span>
+                    <div class="category-date">
+                      <span class="category">SCIENCE</span>
+                      <span class="date">March 4, 2022</span>
+                    </div>
+                </li>
+                <li class="top-news__item">
+                    <span class="top-news__item-title">Africa's fynbos plants hold their ground with the world's thinnest roots</span>
+                    <div class="category-date">
+                        <span class="category">SCIENCE</span>
+                        <span class="date">March 4, 2022</span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>

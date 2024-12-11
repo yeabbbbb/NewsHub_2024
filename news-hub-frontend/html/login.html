@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css">
+    <title>Login</title>
+</head>
+<body>
+    <section class="login-form">
+        <h1><a href="home.html">News Hub</a></h1>
+        <form id="login-form" action="">
+            <div class="int-area">
+                <input type="text" name="id" id="id" autocomplete="off" required>
+                <label for="id">ID</label>
+            </div>
+            <div class="int-area">
+                <input type="password" name="pw" id="pw" autocomplete="off" required>
+                <label for="pw">Password</label>
+            </div>
+            <div class="btn-area">
+                <button id="btn" type="submit">LOGIN</button>
+            </div>
+        </form>]
+        <div class="caption">
+            <a href="join.html">Join Us</a>
+        </div>
+    </section>
+
+    <script type="text/javaScript">
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            Login();
+        });
+
+        function Login() {
+            var id = document.getElementById("id").value;
+            var pw = document.getElementById("pw").value;
+
+            if (id == "") {
+                alert("Please enter your ID.");
+                return false;
+            }
+            else if (pw == "") {
+                alert("Please enter your password.");
+                return false;
+            }
+
+            var data = {
+                "login_id": id,
+                "password": pw
+            };
+
+            fetch('https://hyunewshub.shop/api/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+		credentials: 'include',
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    localStorage.setItem('loggedIn', 'true');
+                    localStorage.setItem('id', id);
+                    window.location.href = 'home.html';
+                }
+                else {
+                    alert('Log in failed: ' + data.message);
+                }
+            })
+            .catch((error) => {
+                console.error('Error: ', error);
+                alert('There was a problem with the log in process: ' + error.message);
+            });
+        }
+    </script>
+</body>
+</html>
